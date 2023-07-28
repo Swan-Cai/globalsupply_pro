@@ -1,0 +1,25 @@
+spring:
+  #Datebase connection info.
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/globalsupply
+    username: root
+    password: Wanpin0107
+  #Configuration file upload
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  #Mybatis Configuration
+  mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+  #AliOSS
+  aliyun:
+  oss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    accessKeyId: LTAI4GCH1vX6DKqJWxd6nEuW
+    accessKeySecret: yBshYweHOpqDuhCArrVHwIiBKpyqSL
+    bucketName: web-tlias
