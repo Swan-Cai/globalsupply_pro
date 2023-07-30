@@ -16,15 +16,6 @@ import java.util.UUID;
 @Component
 public class AliOSSUtils {
 
-//    @Value("${aliyun.oss.endpoint}")
-//    private String endpoint ;
-//    @Value("${aliyun.oss.accessKeyId}")
-//    private String accessKeyId ;
-//    @Value("${aliyun.oss.accessKeySecret}")
-//    private String accessKeySecret ;
-//    @Value("${aliyun.oss.bucketName}")
-//    private String bucketName ;
-
     @Autowired
     private AliOSSProperties aliOSSProperties;
 

@@ -1,6 +1,7 @@
 package com.nci.mapper;
 
 import com.nci.pojo.Dept;
+import com.nci.pojo.Quote;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -30,4 +31,5 @@ public interface DeptMapper {
      */
     @Insert("insert into dept(name, create_time, update_time) values (#{name},#{createTime},#{updateTime})")
     void insert(Dept dept);
+
 }

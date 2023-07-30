@@ -18,9 +18,9 @@ public class Quote {
    private String companyName  ;
    private Short country       ;
    private String message       ;
-   private LocalDateTime submitTime ;
+   private LocalDateTime submittime ;
    private String empName         ;
    private Short status      ;   //1 Pending; 2 Pending
    private String remark        ;
-   private LocalDateTime processingTime;
+   private LocalDateTime processingtime;
 }

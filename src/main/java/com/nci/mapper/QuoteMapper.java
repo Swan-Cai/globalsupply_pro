@@ -13,6 +13,11 @@ public interface QuoteMapper {
     @Select("select * from quote")
     List<Quote> list();
 
-//    @Insert(insert into quote(name, tel, ))
-//    void insert(Quote quote);
+    /**
+     * add new quote
+     * @param quote
+     */
+    @Insert("insert into quote(name,phone,message ) " +
+            "values(#{name}),#{phone},#{message})")
+    void insert(Quote quote);
 }

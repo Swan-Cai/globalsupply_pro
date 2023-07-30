@@ -37,7 +37,7 @@ public interface EmpMapper {
     public List<Emp> list(String name, Short gender, LocalDate begin, LocalDate end);
 
     /**
-     * 新增员工
+     * add new employee
      * @param emp
      */
     @Insert("insert into emp(username, name, gender, image, job, entrydate, dept_id, create_time, update_time) " +
