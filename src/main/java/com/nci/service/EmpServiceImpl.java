@@ -5,6 +5,8 @@ import com.github.pagehelper.PageHelper;
 import com.nci.mapper.EmpMapper;
 import com.nci.pojo.Emp;
 import com.nci.pojo.PageBean;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -71,7 +73,6 @@ public class EmpServiceImpl implements EmpService {
 
     @Override
     public void update(Emp emp) {
-
         emp.setUpdateTime(LocalDateTime.now());
         empMapper.update(emp);
     }

@@ -1,11 +1,7 @@
 package com.nci.mapper;
 
 import com.nci.pojo.Dept;
-import com.nci.pojo.Quote;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -16,6 +12,9 @@ public interface DeptMapper {
      * @return
      */
     @Select("select * from dept")
+    @Results({
+            @Result(property="updateTime",column="update_time"),
+    })
     List<Dept> list();
 
     /**
@@ -31,5 +30,15 @@ public interface DeptMapper {
      */
     @Insert("insert into dept(name, create_time, update_time) values (#{name},#{createTime},#{updateTime})")
     void insert(Dept dept);
+
+    /**
+     * edit the department
+     * @param id
+     * @param name
+     */
+    @Update("update dept set name = #{name} where id = #{id}")
+    void edit(Integer id, String name);
+
+
 
 }

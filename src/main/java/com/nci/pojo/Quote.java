@@ -11,16 +11,16 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Quote {
-   private Integer id     ;
-   private String customerName ;
+   private Long id     ;
+   private String name ;
    private String email         ;
    private String phone         ;
-   private String companyName  ;
-   private Short country       ;
+//   private String companyName  ;
+//   private Short country       ;
    private String message       ;
-   private LocalDateTime submittime ;
-   private String empName         ;
-   private Short status      ;   //1 Pending; 2 Pending
-   private String remark        ;
-   private LocalDateTime processingtime;
+   private LocalDateTime submitTime ;
+//   private String empName         ;
+//   private Short status      ;   //1 Pending; 2 Pending
+//   private String remark        ;
+//   private LocalDateTime processingtime;
 }

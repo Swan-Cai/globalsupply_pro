@@ -5,10 +5,7 @@ import com.nci.pojo.Result;
 import com.nci.service.QuoteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,6 +17,7 @@ public class QuoteController {
     @Autowired
     private QuoteService quoteService;
 
+    @GetMapping
     public Result list(){
         log.info("require all the quote data");
         List<Quote> quoteList = quoteService.list();
@@ -37,4 +35,17 @@ public class QuoteController {
         quoteService.add(quote);
         return Result.success();
     }
+
+    /**
+     * delete quote
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable Integer id){
+        log.info("Delete quote by id:{}",id);
+        quoteService.delete(id);
+        return Result.success();
+    }
+
 }

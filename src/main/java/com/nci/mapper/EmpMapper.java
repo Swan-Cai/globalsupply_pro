@@ -1,9 +1,7 @@
 package com.nci.mapper;
 
 import com.nci.pojo.Emp;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -41,7 +39,7 @@ public interface EmpMapper {
      * @param emp
      */
     @Insert("insert into emp(username, name, gender, image, job, entrydate, dept_id, create_time, update_time) " +
-            " values(#{username},#{name},#{gender},#{image},#{job},#{entrydate},#{deptId},#{createTime},#{updateTime})")
+            " values(#{username},#{name},#{gender},#{image},#{job},#{entryDate},#{deptId},#{createTime},#{updateTime})")
     void insert(Emp emp);
 
     /**
@@ -56,6 +54,9 @@ public interface EmpMapper {
      * update employee information
      * @param emp
      */
+    @Results({
+            @Result(property="updateTime",column="update_time"),
+    })
     void update(Emp emp);
 
     /**

@@ -29,4 +29,11 @@ public class DeptServiceImpl implements DeptService {
         deptMapper.insert(dept);
 
     }
+
+    @Override
+    public void edit(Integer id, String name) {
+        deptMapper.edit(id,name);
+    }
+
+
 }

@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 分页查询结果封装类
+ * Paging query result encapsulation class
  */
 @Data
 @NoArgsConstructor
@@ -15,6 +16,6 @@ import java.util.List;
 public class PageBean {
 
     private Long total;//总记录数
-    private List rows;//数据列表
+    private List rows;//数据列表 Datasheets
 
 }

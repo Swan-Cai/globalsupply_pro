@@ -20,11 +20,13 @@ public class QuoteServiceImpl implements QuoteService{
 
     @Override
     public void add(Quote quote) {
-        quote.setSubmittime(LocalDateTime.now());
-        quote.setProcessingtime(LocalDateTime.now());
-
+        quote.setSubmitTime(LocalDateTime.now());
         quoteMapper.insert(quote);
+    }
 
+    @Override
+    public void delete(Integer id) {
+        quoteMapper.deleteById(id);
     }
 
 

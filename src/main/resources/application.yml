@@ -1,4 +1,17 @@
 spring:
+  mvc:
+    messages:
+      basename: i18n/messages
+      use-code-as-default-message: true
+
+#  #admin Login
+#  security:
+#    user:
+#      name: admin
+#      password: admin
+#      roles: admin
+
+
   #Datebase connection info.
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

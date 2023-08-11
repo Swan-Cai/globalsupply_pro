@@ -57,15 +57,14 @@ public class DeptController {
         return Result.success();
     }
 
-    /**
-     * edit department
-     * @return
-     */
-//    @PutMapping("/{id}")
-//    public Result edit(@PathVariable Integer id){
-//        log.info("edit department:{}",id);
-//        //invoke service
-//        deptService.edit(id);
-//        return Result.success();
-//    }
+
+    @PutMapping("/{id}")
+    public Result edit(@PathVariable Integer id, @RequestBody Dept dept){
+        String newName = dept.getName();
+        log.info("edit department:{},new name:{}",id,newName);
+        //invoke service
+        deptService.edit(id,newName);
+        return Result.success();
+    }
+
 }
